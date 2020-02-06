@@ -1,20 +1,46 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class EventForm extends Component {
-  render() {
+export default function EventForm(props) {
+  
     return (
       <div>
-        <p>
-          New event:
+        <form onSubmit={event => props.onSubmit(event)}>
+        <label>
+          New event: Name
           <input
-            value={this.props.name}
+            type='text'
+            name='name'
+            value={props.values.name}
             onChange={event => {
-              this.props.onChange(event);
+              props.onChange(event);
             }}
           />
-          {/* <button onClick={this.handleAddClick}>Add</button> */}
-        </p>
+        </label>
+        <label>
+          Date
+          <input
+            type='date'
+            name='date'
+            value={props.values.name}
+            onChange={event => {
+              props.onChange(event);
+            }}
+          />
+        </label>
+        <label>
+          Description
+          <input
+            type='textarea'
+            name='description'
+            value={props.values.description}
+            onChange={event => {
+              props.onChange(event);
+            }}
+          />
+        </label>
+                  {/* <button type='submit' onClick={this.handleAddClick}>Add Event</button> */}
+        </form>
       </div>
     )
-  }
+  
 }
