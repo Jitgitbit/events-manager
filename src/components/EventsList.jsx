@@ -11,7 +11,7 @@ export default class EventsList extends Component {
         <ul>
           {this.props.events.map((event, index) => (
             <Link to='' key={index}>
-              <li>{event.description}</li>
+                <li>{event.description}    {event.name}    {event.date}</li>
             </Link>
           ))}
         </ul>

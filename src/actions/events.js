@@ -17,3 +17,19 @@ export const loadEvents = () => (dispatch, getState) => {
     })
     .catch(console.error)
 }
+
+
+export const EVENT_CREATE_SUCCESS = 'EVENT_CREATE_SUCCESS'
+const eventCreateSuccess = event => ({
+  type: EVENT_CREATE_SUCCESS,
+  event
+})
+export const createEvent = (data) => dispatch => {
+  request
+    .post(`${baseUrl}/event`)
+    .send(data)
+    .then(response => {
+      dispatch(eventCreateSuccess(response.body))
+    })
+    .catch(console.error)
+}
