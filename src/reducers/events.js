@@ -6,7 +6,9 @@ export default function eventsReducer(state = initialState, action) {
       return action.payload;
     }
     case 'EVENT_CREATE_SUCCESS': {
-      return action.payload;
+      console.log('the action is',action)
+      const newArray = [...state, action.payload]
+      return newArray;
     }
     default: {
       return state;

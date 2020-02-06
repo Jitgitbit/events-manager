@@ -9,11 +9,12 @@ export default class EventsList extends Component {
       <div>
         <h1>Events List</h1>
         <ul>
-          {this.props.events.map((event, index) => (
+          {this.props.events.map((event, index) => {
+            return (
             <Link to='' key={index}>
                 <li>{event.description}    {event.name}    {event.date}</li>
-            </Link>
-          ))}
+            </Link>)
+          })}
         </ul>
       </div>
     )

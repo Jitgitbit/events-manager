@@ -15,7 +15,7 @@ class CreateEventFormContainer extends React.Component {
     })
   }
   onSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault(event)
     this.props.createEvent(this.state)
     this.setState({
       name: '',

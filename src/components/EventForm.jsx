@@ -38,7 +38,7 @@ export default function EventForm(props) {
             }}
           />
         </label>
-                  {/* <button type='submit' onClick={this.handleAddClick}>Add Event</button> */}
+                  <button type='submit'>Add Event</button>
         </form>
       </div>
     )
