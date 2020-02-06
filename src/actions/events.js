@@ -22,7 +22,7 @@ export const loadEvents = () => (dispatch, getState) => {
 export const EVENT_CREATE_SUCCESS = 'EVENT_CREATE_SUCCESS'
 const eventCreateSuccess = event => ({
   type: EVENT_CREATE_SUCCESS,
-  event
+  payload: event
 })
 export const createEvent = (data) => dispatch => {
   request

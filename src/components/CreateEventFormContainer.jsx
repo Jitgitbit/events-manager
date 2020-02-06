@@ -24,11 +24,17 @@ class CreateEventFormContainer extends React.Component {
     })
   }
   render() {
+    console.log('the events',this.props)
     return (<EventForm
+      name={this.state.name}
       onSubmit={this.onSubmit}
       onChange={this.onChange}
       values={this.state}
     />)
   }
 }
-export default connect(null, {createEvent})(CreateEventFormContainer)
+const mapStateToProps = state => ({
+  events: state.eventsReducer
+})
+
+export default connect(mapStateToProps, {createEvent})(CreateEventFormContainer)
