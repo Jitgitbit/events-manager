@@ -12,6 +12,6 @@ class EventsListContainer extends React.Component {
   }
 }
 const mapStateToProps = state => ({
-  events: state.events
+  events: state.eventsReducer
 })
 export default connect(mapStateToProps, {loadEvents})(EventsListContainer)

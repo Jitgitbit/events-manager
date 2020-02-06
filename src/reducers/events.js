@@ -1,9 +1,9 @@
-const initialState = null;
+const initialState = [];
 
 export default function eventsReducer(state = initialState, action) {
   switch (action.type) {
-    case 'events/EVENTS_FETCHED': {
-      return action.events;
+    case 'EVENTS_FETCHED': {
+      return action.payload;
     }
     
     default: {
