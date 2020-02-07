@@ -2,6 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { createEvent } from '../actions/events'
 import EventForm from './EventForm'
+import {Link} from 'react-router-dom'
+
 
 class CreateEventFormContainer extends React.Component {
   state = {
@@ -29,11 +31,16 @@ class CreateEventFormContainer extends React.Component {
   }
 
   render() {
-    return (<EventForm
+    return (
+    <div>
+    <EventForm
       onSubmit={this.onSubmit}
       onChange={this.onChange}
       values={this.state}
-    />)
+    />
+    <button><Link to={'/'}>Back to the list</Link></button>
+    </div>
+    )
   }
 }
 

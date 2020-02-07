@@ -13,7 +13,7 @@ class EventsListContainer extends React.Component {
     return (
       <>
         <EventsList events={this.props.events} />
-        <button><Link to={'events/new'}>NEW EVENT</Link></button>
+        <button><Link to={'events/new'}>Add an Event!</Link></button>
       </>
     )
   }

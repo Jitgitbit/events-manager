@@ -1,5 +1,7 @@
 import React from 'react'
 import EventForm from './EventForm'
+// import {Link} from 'react-router-dom'
+
 
 export default (props) => {
     const { event, toggleEdit, editMode } = props
@@ -25,8 +27,10 @@ export default (props) => {
             <h1>{event.name}</h1>
             <i>{event.date}</i>
             <p>{event.description}</p>
-            <button onClick={props.delete}>Nuke this event from orbit</button>
+            <button onClick={props.delete}>Delete this event</button>
             <button onClick={toggleEdit}>Edit</button>
+            <br></br>
+            {/* <button><Link to={'/'}>Back to the list</Link></button> */}
         </div>
     )
 }

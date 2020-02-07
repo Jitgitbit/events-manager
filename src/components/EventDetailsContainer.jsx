@@ -62,6 +62,7 @@ class EventDetailsContainer extends React.Component {
         editMode={this.state.editMode}
         onChange={this.onChange}
         onSubmit={this.onSubmit}/>
+        
   }
 }
 
