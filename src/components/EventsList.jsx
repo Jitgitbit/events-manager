@@ -8,7 +8,7 @@ export default (props) => {
         <ul>
             {props.events.map(event => 
                 <li key={event.id}>
-                    <Link to={`/events/${event.id}`}>
+                    <Link to={`/events/${event.id}`}style={{color:'lightgreen'}}>
                         {event.name}
                     </Link>
                 </li>
