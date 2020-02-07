@@ -1,20 +1,27 @@
-import React, { Component } from 'react'
-import store from './store'
+import React, { Component } from 'react';
 import { Provider } from 'react-redux'
 import { Route } from 'react-router-dom'
+import Home from './components/Home';
 import EventsListContainer from './components/EventsListContainer'
 import CreateEventFormContainer from './components/CreateEventFormContainer'
+import EventDetailsContainer from './components/EventDetailsContainer'
+import store from './store'
+
+import './App.css';
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div>
+        <div className="App">
+          <Home/>
           <Route path="/" exact component={EventsListContainer} />
-          <CreateEventFormContainer/>
+          <Route path="/events/:id" component={EventDetailsContainer} />
+          <Route path="/events/new" exact component={CreateEventFormContainer} />
         </div>
       </Provider>
     );
   }
 }
-export default App
+
+export default App;
