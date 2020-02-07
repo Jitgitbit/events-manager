@@ -1,6 +1,6 @@
 import React from 'react'
 import EventForm from './EventForm'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 export default (props) => {
@@ -30,7 +30,7 @@ export default (props) => {
             <button onClick={props.delete}>Delete this event</button>
             <button onClick={toggleEdit}>Edit</button>
             <br></br>
-            {/* <button><Link to={'/'}>Back to the list</Link></button> */}
+            <button><Link to={'/'}>Back to the list</Link></button>
         </div>
     )
 }
